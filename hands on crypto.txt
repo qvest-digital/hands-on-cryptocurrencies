@@ -1,0 +1,229 @@
+Hands-on Crypto
+---------------
+
+[THEORIE]
+
+	Cryptocurrencies
+	* Crypto = Kryptographie
+
+	was ist ein Wallet?
+    	private/public Key pair
+		Bitcoin: 
+			ECDSA elliptic curve digital signature algorithm
+			private key = 256bit = 32byte random
+			public key -> sha256 -> ripemd-160 = address
+	
+[HANDS ON]
+
+	wallet erzeugen
+	-> https://www.bitaddress.org/bitaddress.org-v3.3.0-SHA256-dec17c07685e1870960903d8f58090475b25af946fe95a734f88408cef4aa194.html?testnet=true
+	-> https://bitcoinpaperwallet.com/bitcoinpaperwallet/generate-wallet.html?design=alt-testnet#
+	-> electrum --testnet
+	
+	Seed words
+
+	Bitcoins bekommen:
+	-> https://coinfaucet.eu/en/btc-testnet/
+
+[THEORIE]
+
+	Keys in eigener Verantwortung zu schützen!
+		Opsec!
+	verschiedene Wallet Varianten:
+		Software
+			Electrum
+		Web-Wallet, Paper wallet
+			https://www.bitaddress.org/bitaddress.org-v3.3.0-SHA256-dec17c07685e1870960903d8f58090475b25af946fe95a734f88408cef4aa194.html?testnet=true
+			https://bitcoinpaperwallet.com/bitcoinpaperwallet/generate-wallet.html?design=alt-testnet
+		Apps
+			Mycelium		https://play.google.com/store/apps/details?id=com.mycelium.testnetwallet
+
+		Hardware wallets
+			https://www.ledger.com/products/ledger-nano-s
+			https://shop.trezor.io/product/trezor-one-white
+			https://shop.trezor.io/product/cryptosteel
+			https://shiftcrypto.ch/features
+			https://keepkey.myshopify.com/collections/frontpage/products/keepkey-the-simple-bitcoin-hardware-wallet
+
+[HANDS ON]
+
+	Transaktionen
+		Adressen austauschen -> Rocket Chat?
+		Transaktion starten -> Electrum
+	Block Explorer
+		https://live.blockcypher.com/btc-testnet/
+		
+[THEORIE]
+
+	Transaktionen
+		UTXO Model
+		Mempool
+		Blocks
+			Dauer	10 min
+			Größenlimit
+				https://www.blockchain.com/charts/avg-block-size?timespan=all
+				wann Änderungen?
+		Nodes
+			https://coin.dance/nodes
+			https://bitnodes.earn.com/
+
+
+
+
+[THEORIE]
+
+	Bitcoin revolutionäre Idee, aber technisch beschränkt
+	Idee sogar älter als Bitcoin: Smart Contracts
+	2013 Vitalik Buterin -> Ethereum mit Turing-vollständiger Programmierbarkeit
+
+[HANDS ON]
+
+	Chromium Metamask Account erstellen
+
+[LIVE CODING]
+
+	Remix IDE / Metamask
+	TarentToken.sol
+	+ live ergänzen um Methode request()
+	Deployment auf Ropsten
+		-> Adresse, ABI
+	
+[HANDS ON]
+	
+	Interaktion mit Contract
+	-> statische index.html mit Javascript, Buttons für Contract-Aufrufe, Anzeige Status
+	
+	https://medium.com/coinmonks/interacting-with-ethereum-smart-contracts-through-web3-js-e0efad17977
+	https://www.ethereum.org/greeter
+		
+
+
+
+
+
+
+
+[THEORIE]
+
+	P2P-Netz -> Betrieb eines Nodes
+
+	Was ist das?
+		Knoten zur Teilnahme am P2P-Netz
+		Verifiziert und speichert Blocks
+		Leitet Transaktionen weiter
+
+[HANDS ON]
+
+	geth --testnet --syncmode light			(Sync für 6 Wochen? dauert trotzdem lange ...)
+	
+
+
+[THEORIE]
+
+- Mining
+	vorführen
+		minerd -o stratum+tcp://stratum.slushpool.com:3333 --algo sha256d -u test -p test
+		xmrig ?
+		https://medium.com/@lopp/how-to-solo-mine-on-bitcoin-s-testnet-6073c917b495
+
+		geth --testnet --mine --etherbase 0xb955173f9550681FcA820380E9d47846A8ad9c3f -> geht nicht, muss erst syncen
+		bfgminer -> geht nicht, kein CPU Support einkompiliert
+	idR nicht profitabel
+		Bild zeigen: aktuelle Mining Farm
+
+	
+	
+	
+- was noch?
+  eigene private Chain
+  eigene ERC-20 Tokens
+
+Testnets:
+- Bitcoin
+	https://en.bitcoin.it/wiki/Testnet
+	
+	public key n2jeuKJL6WWJmwu1iRfdwrcDjANt5bS89E 
+	private key 91msQySLUywjQ4Fd5WMHRU5g6kgd5zZEWB6abVjVHHUTUQYRPY7 
+	0.91250199 BTC
+
+	public key mgTnWDoBdsXUNnCB7mZiAzZRkxbaZmo5zd 
+	private key 92asxTbUPhssKZhnR2T86jZbumR8SEuZLrXWtQhca4sYPfKMq1D 
+	0.27156923 BTC
+		
+	Faucets:	https://coinfaucet.eu/en/btc-testnet/
+	Explorer:	https://live.blockcypher.com/btc-testnet/
+
+- Ethereum
+	https://ropsten.etherscan.io/
+	https://vintage.myetherwallet.com/
+		
+		public key 0x85C39A448943f1564adBD3d4DC30339aF5663946
+		private key a4a3e66efc74dab7b243fec042e29423d51135678898cb163168b84830db44ab
+		2 ETH
+		
+		public key 0xb955173f9550681FcA820380E9d47846A8ad9c3f
+		private key 270f967a30e1db1e8555d0d0e6fb73f0587e53ccea7d993a556fc6cd414d14af
+		1.5 ETH
+		
+	https://ropsten-stats.parity.io/	https://ethstats.net/
+	
+	Faucets:
+		https://faucet.ropsten.be/
+		curl -X POST  -H "Content-Type: application/json" -d '{"toWhom":"0xb955173f9550681FcA820380E9d47846A8ad9c3f"}' https://ropsten.faucet.b9lab.com/tap
+
+	Programmierbar
+	
+		EVM, Ausführung zur Konsensfindung
+		Smart Contracts, programmiert in "Solidity"
+
+	Tokens
+	
+		ERC20
+		Zusätzliche Bilanzeinheit, definiert durch Contract-Code
+		https://etherscan.io/tokens	177000+ token contracts deployed
+	
+	[HANDS ON: Token contract für TARENT tokens deployen, Interaktion]
+	
+		[Einrichtung Metamask -> langwierig]
+		
+		Metamask	VcJYEAQMjA8H
+					unique verb adjust give search insect cat metal canvas romance bread knee
+					
+		TarentToken.sol -> https://ropsten.etherscan.io/address/0x8b1bcab0cc885cdd585a605e2ff0068c54c16735
+		
+	
+		Remix IDE	https://remix.ethereum.org
+		Files TarentToken.sol, ERC20TokenInterface.sol
+		
+		Deploy contract
+		
+		Address, ABI -> per MyEtherWallet
+		
+			https://theethereum.wiki/w/index.php/ERC20_Token_Standard
+			https://programtheblockchain.com/posts/2018/01/30/writing-an-erc20-token-contract/
+			https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol
+		
+Exkurs: Opsec
+	Gefahren: Verlust (gelöscht, HDD-Schaden), Diebstahl (Phishing, Keylogger)
+	sicherer Computer, sicherer Browser, sichere Software
+	Website-Zertifikate
+	sichere Passwörter (Password-Manager)
+	2FA (möglichst nicht per Handy)
+	Backups (offline, offsite)
+	Paranoia
+
+vorgefertigte Wallets 20 Stück?
+
+
+Live-CD:
+	pacman -S electrum bfgminer go-ethereum
+	Etherwall/Mist + geth --light
+	pacaur -S rocketchat-client-bin
+	
+
+
+
+
+Markdown
+	https://aur.archlinux.org/packages.php?K=markdown
+	https://www.sitepoint.com/the-best-markdown-editor-for-linux/
