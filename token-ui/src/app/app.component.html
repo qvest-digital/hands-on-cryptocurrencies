@@ -1,20 +1,72 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
 
+  <h1 class="title">Token contract demo</h1>
+
+  <div *ngIf="web3 === undefined" class="notification is-warning">
+    No Ethereum web3 extension available!
+  </div>
+
+  <form>
+
+    <div class="columns">
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="field">
+              <label class="label">Contract address</label>
+              <div class="control"><input class="input" type="text" name="contractAddress" [(ngModel)]="contractAddress" disabled></div>
+            </div>
+
+            <div class="field">
+              <label class="label">ABI</label>
+              <div class="control">
+                  <textarea class="textarea" rows="5" disabled>{{abi}}</textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">My address</label>
+              <div class="control"><input class="input" type="text" name="walletAddress" [(ngModel)]="walletAddress" disabled></div>
+            </div>
+
+            <div class="field">
+              <label class="label">Token balance</label>
+              <div class="control"><input class="input" type="text" value="0" disabled></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <label class="label">Request token</label>
+            <div class="field"><div class="control"><button type="button" class="button is-link" (click)="requestToken()">send tx</button></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <label class="label">Send tokens</label>
+
+            <div class="field">
+              <label class="label">amount</label>
+              <div class="control"><input #amount class="input" type="number" value="1"></div>
+            </div>
+
+            <div class="field">
+              <label class="label">to</label>
+              <div class="control"><input #recipient class="input" type="text" placeholder="recipient address"></div>
+            </div>
+
+            <div class="field"><div class="control"><button type="button" class="button is-link" (click)="sendTokens(amount.value, recipient.value)">send tx</button></div></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
