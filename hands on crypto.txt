@@ -3,102 +3,13 @@ Hands-on Crypto
 
 [THEORIE]
 
-	Cryptocurrencies
-	* Crypto = Kryptographie
-
-	was ist ein Wallet?
-    	private/public Key pair
-		Bitcoin: 
-			ECDSA elliptic curve digital signature algorithm
-			private key = 256bit = 32byte random
-			public key -> sha256 -> ripemd-160 = address
-	
-[HANDS ON]
-
-	wallet erzeugen
-	-> https://www.bitaddress.org/bitaddress.org-v3.3.0-SHA256-dec17c07685e1870960903d8f58090475b25af946fe95a734f88408cef4aa194.html?testnet=true
-	-> https://bitcoinpaperwallet.com/bitcoinpaperwallet/generate-wallet.html?design=alt-testnet#
-	-> electrum --testnet
-	
-	Seed words
-
-	Bitcoins bekommen:
-	-> https://coinfaucet.eu/en/btc-testnet/
-
-[THEORIE]
-
-	Keys in eigener Verantwortung zu schützen!
-		Opsec!
-	verschiedene Wallet Varianten:
-		Software
-			Electrum
-		Web-Wallet, Paper wallet
-			https://www.bitaddress.org/bitaddress.org-v3.3.0-SHA256-dec17c07685e1870960903d8f58090475b25af946fe95a734f88408cef4aa194.html?testnet=true
-			https://bitcoinpaperwallet.com/bitcoinpaperwallet/generate-wallet.html?design=alt-testnet
-		Apps
-			Mycelium		https://play.google.com/store/apps/details?id=com.mycelium.testnetwallet
-
-		Hardware wallets
-			https://www.ledger.com/products/ledger-nano-s
-			https://shop.trezor.io/product/trezor-one-white
-			https://shop.trezor.io/product/cryptosteel
-			https://shiftcrypto.ch/features
-			https://keepkey.myshopify.com/collections/frontpage/products/keepkey-the-simple-bitcoin-hardware-wallet
-
-[HANDS ON]
-
-	Transaktionen
-		Adressen austauschen -> Rocket Chat?
-		Transaktion starten -> Electrum
-	Block Explorer
-		https://live.blockcypher.com/btc-testnet/
-		
-[THEORIE]
-
-	Transaktionen
-		UTXO Model
-		Mempool
-		Blocks
-			Dauer	10 min
-			Größenlimit
-				https://www.blockchain.com/charts/avg-block-size?timespan=all
-				wann Änderungen?
 		Nodes
 			https://coin.dance/nodes
 			https://bitnodes.earn.com/
 
-
-
-
-[THEORIE]
-
-	Bitcoin revolutionäre Idee, aber technisch beschränkt
-	Idee sogar älter als Bitcoin: Smart Contracts
-	2013 Vitalik Buterin -> Ethereum mit Turing-vollständiger Programmierbarkeit
-
 [HANDS ON]
 
 	Chromium Metamask Account erstellen
-
-[LIVE CODING]
-
-	Remix IDE / Metamask
-	TarentToken.sol
-	+ live ergänzen um Methode request()
-	Deployment auf Ropsten
-		-> Adresse, ABI
-	
-[HANDS ON]
-	
-	Interaktion mit Contract
-	-> statische index.html mit Javascript, Buttons für Contract-Aufrufe, Anzeige Status
-	
-	https://medium.com/coinmonks/interacting-with-ethereum-smart-contracts-through-web3-js-e0efad17977
-	https://www.ethereum.org/greeter
-		
-
-
-
 
 
 
@@ -137,6 +48,7 @@ Hands-on Crypto
 - was noch?
   eigene private Chain
   eigene ERC-20 Tokens
+  Pinata Contract
 
 Testnets:
 - Bitcoin
@@ -220,10 +132,3 @@ Live-CD:
 	Etherwall/Mist + geth --light
 	pacaur -S rocketchat-client-bin
 	
-
-
-
-
-Markdown
-	https://aur.archlinux.org/packages.php?K=markdown
-	https://www.sitepoint.com/the-best-markdown-editor-for-linux/
