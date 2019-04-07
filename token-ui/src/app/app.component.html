@@ -2,7 +2,7 @@
 
   <h1 class="title">Token contract demo</h1>
 
-  <div *ngIf="web3 === undefined" class="notification is-warning">
+  <div *ngIf="web3.eth === undefined" class="notification is-warning">
     No Ethereum web3 extension available!
   </div>
 
@@ -21,13 +21,13 @@
             <div class="field">
               <label class="label">ABI</label>
               <div class="control">
-                  <textarea class="textarea" rows="5" disabled>{{abi}}</textarea>
+                  <textarea class="textarea" rows="5" disabled>{{JSON.stringify(contractAbi)}}</textarea>
               </div>
             </div>
 
             <div class="field">
               <label class="label">My address</label>
-              <div class="control"><input class="input" type="text" name="walletAddress" [(ngModel)]="walletAddress" disabled></div>
+              <div class="control"><input class="input" type="text" name="walletAddress" value="{{accountAddress}}" disabled></div>
             </div>
 
             <div class="field">
