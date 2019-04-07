@@ -1,6 +1,6 @@
-	Transaktionen
-		UTXO Model
-		Mempool
+# :mortar_board: THEORIE: _Transaktionen_
+UTXO Model
+ 	Mempool
 		Blocks
 			Dauer	10 min
 			Größenlimit

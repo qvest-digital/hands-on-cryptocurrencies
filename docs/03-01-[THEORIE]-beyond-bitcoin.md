@@ -1,4 +1,4 @@
-# _THEORIE:_ beyond bitcoin
+# :mortar_board: THEORIE: _Beyond bitcoin_
 
 ## Bitcoin ist Urahn aller Cryptocurrencies
 - langsam, technisch beschränkt

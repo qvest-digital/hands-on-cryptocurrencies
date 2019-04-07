@@ -1,4 +1,6 @@
-# _HANDS-ON:_ bootstrap the workshop
+# :construction_worker: HANDS-ON: _Bootstrap the workshop_
+
+Wir benutzen ein Linux Live-System mit vorinstallierter Software.
 
 ## Rechner von USB-Stick booten
    
