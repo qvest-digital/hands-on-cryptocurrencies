@@ -115,14 +115,6 @@ Testnets:
 			https://programtheblockchain.com/posts/2018/01/30/writing-an-erc20-token-contract/
 			https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol
 		
-Exkurs: Opsec
-	Gefahren: Verlust (gelöscht, HDD-Schaden), Diebstahl (Phishing, Keylogger)
-	sicherer Computer, sicherer Browser, sichere Software
-	Website-Zertifikate
-	sichere Passwörter (Password-Manager)
-	2FA (möglichst nicht per Handy)
-	Backups (offline, offsite)
-	Paranoia
 
 vorgefertigte Wallets 20 Stück?
 
