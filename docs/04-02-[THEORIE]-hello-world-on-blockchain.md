@@ -1,3 +1,5 @@
+# :mortar_board: THEORIE: 
+
 	Remix IDE / Metamask
 	TarentToken.sol
 	+ live ergänzen um Methode request()
