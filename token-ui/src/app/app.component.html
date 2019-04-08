@@ -6,6 +6,10 @@
     No Ethereum web3 extension available!
   </div>
 
+  <div *ngIf="accountAddress === null" class="notification is-warning">
+    No Ethereum account unlocked
+  </div>
+
   <form>
 
     <div class="columns">
@@ -32,7 +36,7 @@
 
             <div class="field">
               <label class="label">Token balance</label>
-              <div class="control"><input class="input" type="text" value="0" disabled></div>
+              <div class="control"><input class="input" type="text" value="{{accountBalance}}" disabled></div>
             </div>
           </div>
         </div>
@@ -63,6 +67,14 @@
 
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-content">
+            <label class="label">Kill contract (only owner can do this)</label>
+            <div class="field"><div class="control"><button type="button" class="button is-link" (click)="killContract()">Kill</button></div></div>
+          </div>
+        </div>
+
       </div>
 
     </div>

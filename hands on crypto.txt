@@ -9,10 +9,7 @@ Hands-on Crypto
 
 [HANDS ON]
 
-	Chromium Metamask Account erstellen
-
-
-
+	Chromium Metamask / Mist Account erstellen
 
 [THEORIE]
 
@@ -26,8 +23,6 @@ Hands-on Crypto
 [HANDS ON]
 
 	geth --testnet --syncmode light			(Sync für 6 Wochen? dauert trotzdem lange ...)
-	
-
 
 [THEORIE]
 
@@ -36,19 +31,6 @@ Hands-on Crypto
 		minerd -o stratum+tcp://stratum.slushpool.com:3333 --algo sha256d -u test -p test
 		xmrig ?
 		https://medium.com/@lopp/how-to-solo-mine-on-bitcoin-s-testnet-6073c917b495
-
-		geth --testnet --mine --etherbase 0xb955173f9550681FcA820380E9d47846A8ad9c3f -> geht nicht, muss erst syncen
-		bfgminer -> geht nicht, kein CPU Support einkompiliert
-	idR nicht profitabel
-		Bild zeigen: aktuelle Mining Farm
-
-	
-	
-	
-- was noch?
-  eigene private Chain
-  eigene ERC-20 Tokens
-  Pinata Contract
 
 Testnets:
 - Bitcoin
@@ -115,12 +97,8 @@ Testnets:
 			https://programtheblockchain.com/posts/2018/01/30/writing-an-erc20-token-contract/
 			https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol
 		
-
-vorgefertigte Wallets 20 Stück?
-
-
 Live-CD:
 	pacman -S electrum bfgminer go-ethereum
 	Etherwall/Mist + geth --light
-	pacaur -S rocketchat-client-bin
+	pacaur -S rocketchat-client-bin mist
 	

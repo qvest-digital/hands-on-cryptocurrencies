@@ -1,7 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { WEB3 } from './service/web3.injector';
+import {Component, Inject, OnInit} from '@angular/core';
+import {WEB3} from './service/web3.injector';
 import Web3 from 'web3';
-import {Contract} from 'web3-eth-contract/types';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +11,12 @@ export class AppComponent implements OnInit {
 
   readonly title = 'token-ui';
   readonly contractAbi = require('./contract/contract_abi.json');
-  readonly contractAddress = '0x8b1bcab0cc885cdd585a605e2ff0068c54c16735';
+  readonly contractAddress = '0xa6B66F376f0c7C38CA5976c6010C5BE9454c3a6e';
 
   JSON = JSON;
 
   accountAddress: string;
+  accountBalance: number;
 
   private contract: any;
 
@@ -25,29 +25,69 @@ export class AppComponent implements OnInit {
 
   async ngOnInit() {
     if (this.web3.eth !== undefined) {
-
       this.contract = new this.web3.eth.Contract(
         this.contractAbi,
         this.contractAddress
       );
 
       this.accountAddress = await this.web3.eth.getCoinbase();
+      this.accountBalance = await this.getMyBalance();
+    }
+  }
+
+  async getMyBalance(): Promise<number> {
+    if (this.accountAddress === null || this.accountAddress === undefined) {
+      return Promise.resolve(0);
+    } else {
+      return new Promise<number>((resolve, reject) => {
+        this.contract.methods.balanceOf(this.accountAddress).call(
+          {
+            from: this.accountAddress
+          },
+          (err, result) => {
+            if (err) {
+              console.log(err);
+              reject(new Error('call failed'));
+            } else {
+              resolve(Number(result.toString()));
+            }
+          }
+        );
+      });
     }
   }
 
   requestToken() {
-    console.log('request token');
-    console.log(this.contract);
     this.contract.methods.request().send(
       {
-        from: this.accountAddress,
-        gas: 20000
+        from: this.accountAddress
       },
       (err, result) => {
-        console.log(err);
-        console.log(result);
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(result);
+        }
       }
     );
+  }
+
+  killContract() {
+    return new Promise<number>((resolve, reject) => {
+      this.contract.methods.close().send(
+        {
+          from: this.accountAddress
+        },
+        (err, result) => {
+          if (err) {
+            console.log(err);
+            reject(new Error('call failed'));
+          } else {
+            resolve(result);
+          }
+        }
+      );
+    });
   }
 
   sendTokens(amount: number, recipient: string) {

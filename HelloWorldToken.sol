@@ -34,18 +34,18 @@ contract Mortal is Owned {
 // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
 // ----------------------------------------------------------------------------
 
-contract TarentToken is Owned, Mortal {
+contract HelloWorldToken is Owned, Mortal {
 
 	// Information about this token
 
-    string  constant name        = "tarent Token";
-    string  constant symbol      = "TARENT";
-    uint8   constant decimals    = 0;
-    uint256 constant totalSupply = 10;
+    string  constant public name        = "Hello World Token";
+    string  constant public symbol      = "HELLOWORLD";
+    uint8   constant public decimals    = 0;
+    uint256 constant public totalSupply = 100;
     
     // Track how many tokens are owned by each address.
 
-	mapping (address => uint256) balanceOf;
+	mapping (address => uint256) public balanceOf;
 
     constructor() public {
         // Initially assign all tokens to the contract's creator.
