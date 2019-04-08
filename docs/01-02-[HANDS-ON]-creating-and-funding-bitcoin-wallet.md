@@ -28,7 +28,7 @@
 
 - Bestätigung
 
-![Facucet TX](./pics/faucet-tx.png)
+![Faucet TX](./pics/faucet-tx.png)
 
 - Transaktion im Block-Explorer verfolgen
 
