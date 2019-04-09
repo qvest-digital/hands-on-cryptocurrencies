@@ -30,8 +30,7 @@ contract Mortal is Owned {
 }
 
 // ----------------------------------------------------------------------------
-// ERC Token Standard #20 Implementation
-// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
+// Custom "Hello World" token contract, follows ERC20 standard.
 // ----------------------------------------------------------------------------
 
 contract HelloWorldToken is Owned, Mortal {
@@ -42,15 +41,17 @@ contract HelloWorldToken is Owned, Mortal {
     string  constant public symbol      = "HELLOWORLD";
     uint8   constant public decimals    = 0;
     uint256 constant public totalSupply = 100;
-    
+
+    address constant zeroAddress = address(0);
+
     // Track how many tokens are owned by each address.
 
 	mapping (address => uint256) public balanceOf;
 
     constructor() public {
-        // Initially assign all tokens to the contract's creator.
-        balanceOf[owner] = totalSupply;
-        emit Transfer(address(0), owner, totalSupply);
+        // Initially all tokens are in the "zero" address
+        balanceOf[0] = totalSupply;
+        emit Transfer(zeroAddress, zeroAddress, totalSupply);
     }
     
 	// Normal token transfer functionality
@@ -90,18 +91,22 @@ contract HelloWorldToken is Owned, Mortal {
         return true;
     }
 	
-	// Giveaway functionality
+	// Request functionality: allow users to request 1 token per call until all tokens have been distributed.
 
     /**
-     * Request transfer of 1 token from contract owner to sender.
+     * Request transfer of 1 token from "zero" address to sender.
      */
     function request() public {
-        require(balanceOf[owner] >= 1, "Sorry, out of tokens!");
+        require(balanceOf[zeroAddress] >= 1, "Sorry, out of tokens!");
         
-        balanceOf[owner] -= 1;
+        balanceOf[zeroAddress] -= 1;
         balanceOf[msg.sender] += 1;
         
-        emit Transfer(owner, msg.sender, 1);
+        emit Transfer(zeroAddress, msg.sender, 1);
+    }
+
+    function availableForRequest() public returns (uint256 available) {
+        return balanceOf[zeroAddress];
     }
 	
 }

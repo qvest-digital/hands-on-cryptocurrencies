@@ -5,13 +5,11 @@ Wir benutzen ein Linux Live-System mit vorinstallierter Software.
 ## Rechner von USB-Stick booten
    
   * anschalten
-  * F11 drücken
+  * F12 drücken
   * im Boot-menü USB-Stick auswählen
 
 ## Linux starten
 
-  * ...
-
-## Linux Login
-- User: xxx
-- Password: yyy
+  * deutsches Tastaturlayout einstellen (keytable=de)
+  * "Boot: Manjaro.x86_64 xfce" auswählen
+  * WLAN "tarent-guest" einrichten
