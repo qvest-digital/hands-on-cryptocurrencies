@@ -7,10 +7,6 @@ Hands-on Crypto
 			https://coin.dance/nodes
 			https://bitnodes.earn.com/
 
-[HANDS ON]
-
-	Chromium Metamask / Mist Account erstellen
-
 [THEORIE]
 
 	P2P-Netz -> Betrieb eines Nodes
@@ -19,18 +15,6 @@ Hands-on Crypto
 		Knoten zur Teilnahme am P2P-Netz
 		Verifiziert und speichert Blocks
 		Leitet Transaktionen weiter
-
-[HANDS ON]
-
-	geth --testnet --syncmode light			(Sync für 6 Wochen? dauert trotzdem lange ...)
-
-[THEORIE]
-
-- Mining
-	vorführen
-		minerd -o stratum+tcp://stratum.slushpool.com:3333 --algo sha256d -u test -p test
-		xmrig ?
-		https://medium.com/@lopp/how-to-solo-mine-on-bitcoin-s-testnet-6073c917b495
 
 Testnets:
 - Bitcoin
@@ -78,21 +62,9 @@ Testnets:
 	
 	[HANDS ON: Token contract für TARENT tokens deployen, Interaktion]
 	
-		[Einrichtung Metamask -> langwierig]
-		
 		Metamask	VcJYEAQMjA8H
 					unique verb adjust give search insect cat metal canvas romance bread knee
 					
-		TarentToken.sol -> https://ropsten.etherscan.io/address/0x8b1bcab0cc885cdd585a605e2ff0068c54c16735
-		
-	
-		Remix IDE	https://remix.ethereum.org
-		Files TarentToken.sol, ERC20TokenInterface.sol
-		
-		Deploy contract
-		
-		Address, ABI -> per MyEtherWallet
-		
 			https://theethereum.wiki/w/index.php/ERC20_Token_Standard
 			https://programtheblockchain.com/posts/2018/01/30/writing-an-erc20-token-contract/
 			https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol
