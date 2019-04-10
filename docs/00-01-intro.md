@@ -2,7 +2,7 @@
 
 # *HANDS-ON CRYPTOCURRENCIES*
 
-mit [Hannes Rohde](h.rohde@tarent.de) und [Daniel Zerlett](d.zerlett@tarent.de).
+mit _Hannes Rohde_ und _Daniel Zerlett_.
 
 ## Was erwartet euch heute?
 

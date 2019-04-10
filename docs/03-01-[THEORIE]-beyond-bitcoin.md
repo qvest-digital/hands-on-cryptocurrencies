@@ -1,13 +1,16 @@
 # :mortar_board: THEORIE: _Beyond bitcoin_
 
 ## Bitcoin ist Urahn aller Cryptocurrencies
-- langsam, technisch beschränkt
+- geschickte Kombination existierender Technologien / Konzepte mit bahnbrechendem Ergebnis
+- aber: langsam und beschränkt  
+  - Blocktime von 10 Minuten sehr konservativ -  Konsensfindung viel schneller möglich
+  - Blockgröße von 1MB begrenzt Anzahl der Transaktionen pro Block
 
 ## Zahlreiche Clones, Forks, Weiterentwicklungen
 
 ### schneller / höherer Durchsatz
-- Blocktime bei Bitcoin (10 Minuten) sehr konservativ, Konsensfindung viel schneller möglich
-- Blockgröße 1MB begrenzt Anzahl der Transaktionen pro Block
+- kürzere Blockzeiten (Litecoin)
+- größere Blocks (Bitcoin Cash)
 
 ### funktionale Erweiterungen
 - Privacy (Monero, Zcash)
