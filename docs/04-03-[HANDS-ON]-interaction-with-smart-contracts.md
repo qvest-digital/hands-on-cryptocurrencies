@@ -1,21 +1,27 @@
-# :construction_worker: HANDS-ON:
-	
-	Interaktion mit Contract
-	-> statische index.html mit Javascript, Buttons für Contract-Aufrufe, Anzeige Status
-	
-	https://medium.com/coinmonks/interacting-with-ethereum-smart-contracts-through-web3-js-e0efad17977
-	https://www.ethereum.org/greeter
+# :construction_worker: HANDS-ON: Interaktion mit dem Contract
 
+## Browser-Addon _Metamask_ einrichten
 
-Vorbereitet:
+- Metamask Addon installieren  
+  Menu -> More Tools -> Extensions -> Chrome Web Store -> Metamask -> Add to Chrome
+  
+![](./pics/chrome-store-metamask.png)
+  
+## Wallet anlegen  
+- "Get started" -> "Create a wallet" -> "No thanks"
+- Passwort vergeben: z.B. "abcd1234"
+- Checkbox setzen, "Create"
+- "Secret Words" abschreiben und im nächsten Screen wieder eintragen
 
-	Metamask Addon installieren
-	Wallet anlegen
+![](./pics/metamask-backup-phrase.png)
+- "All done"
+
+![](./pics/metamask-home.png)
+
+## Testnet-Ether anfordern
+
+    ./get-ropsten-eth.sh <my-ethereum-address>
 	
-		"Create a wallet"
-		"No thanks"
-		Passwort eingeben "abcd1234"
-		Secret Backup Phrase
-		"draft mystery dignity question sound trade control decorate fiscal elegant abstract rigid"
-		
-		
+## Interaktion mit Contract
+
+UI unter http://127.0.0.1:4200/

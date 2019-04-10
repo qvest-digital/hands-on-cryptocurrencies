@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1 class="title">Token contract demo</h1>
+  <h1 class="title">Hello world contract demo</h1>
 
   <div *ngIf="web3.eth === undefined" class="notification is-warning">
     No Ethereum web3 extension available!
@@ -19,7 +19,7 @@
           <div class="card-content">
             <div class="field">
               <label class="label">Contract address</label>
-              <div class="control"><input class="input" type="text" name="contractAddress" [(ngModel)]="contractAddress" disabled></div>
+              <div class="control"><input class="input" type="text" name="contractAddress" value="{{contractAddress}}" disabled></div>
             </div>
 
             <div class="field">
@@ -30,12 +30,23 @@
             </div>
 
             <div class="field">
+              <label class="label">HELLOWORLD tokens available for grabbing</label>
+              <div class="control">
+                <div class="control"><input class="input" type="text" name="upForGrabs" value="{{upForGrabs}}" disabled></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="field">
               <label class="label">My address</label>
               <div class="control"><input class="input" type="text" name="walletAddress" value="{{accountAddress}}" disabled></div>
             </div>
 
             <div class="field">
-              <label class="label">Token balance</label>
+              <label class="label">My HELLOWORLD token balance</label>
               <div class="control"><input class="input" type="text" value="{{accountBalance}}" disabled></div>
             </div>
           </div>
@@ -45,13 +56,13 @@
       <div class="column">
         <div class="card">
           <div class="card-content">
-            <label class="label">Request token</label>
-            <div class="field"><div class="control"><button type="button" class="button is-link" (click)="requestToken()">send tx</button></div></div>
+            <label class="label">Grab HELLOWORLD token</label>
+            <div class="field"><div class="control"><button type="button" class="button is-link" (click)="grabToken()">grab</button></div></div>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <label class="label">Send tokens</label>
+            <label class="label">Send HELLOWORLD tokens</label>
 
             <div class="field">
               <label class="label">amount</label>
@@ -77,6 +88,23 @@
 
       </div>
 
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <ng-container *ngFor="let tx of transactions">
+            <div *ngIf="tx.success" class="notification is-success">
+              <a href="https://ropsten.etherscan.io/tx/{{tx.hash}}" target="_blank">tx {{tx.hash}}</a>
+            </div>
+
+            <div *ngIf="!tx.success" class="notification is-warning">
+              {{tx.message}}
+            </div>
+
+          </ng-container>
+        </div>
+      </div>
     </div>
 
   </form>

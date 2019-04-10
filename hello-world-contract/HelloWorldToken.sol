@@ -50,7 +50,7 @@ contract HelloWorldToken is Owned, Mortal {
 
     constructor() public {
         // Initially all tokens are in the "zero" address
-        balanceOf[0] = totalSupply;
+        balanceOf[zeroAddress] = totalSupply;
         emit Transfer(zeroAddress, zeroAddress, totalSupply);
     }
     
@@ -94,9 +94,9 @@ contract HelloWorldToken is Owned, Mortal {
 	// Request functionality: allow users to request 1 token per call until all tokens have been distributed.
 
     /**
-     * Request transfer of 1 token from "zero" address to sender.
+     * Grab 1 token by transferring it from "zero" address to sender.
      */
-    function request() public {
+    function grab() public {
         require(balanceOf[zeroAddress] >= 1, "Sorry, out of tokens!");
         
         balanceOf[zeroAddress] -= 1;
@@ -105,7 +105,10 @@ contract HelloWorldToken is Owned, Mortal {
         emit Transfer(zeroAddress, msg.sender, 1);
     }
 
-    function availableForRequest() public returns (uint256 available) {
+    /**
+     * Returns the number of tokens available for grabbing.
+     */
+    function upForGrabs() public view returns (uint256 available) {
         return balanceOf[zeroAddress];
     }
 	
