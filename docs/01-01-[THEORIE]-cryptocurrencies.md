@@ -19,3 +19,15 @@
 - public key = RIPEMD-160(SHA256(private key)) = Adresse
 
 
+## Bitcoin Kursentwicklung
+ - ![Block explorer](./pics/block-explorer-tx.png)
+
+## Bitcoin Forks (Split Coins)
+ - Bitcoin Cash: Fork bei Block 478558, 1.8.2017, (BTC->BCH)
+ - Bitcoin Gold: Fork bei Block 491407, 24.10.2017, (BTC->BTG)
+ - Bitcoin SV: Fork bei Block 556766, 15.11.2018 (BCH->BSV)
+ - plus zig andere eher unbedeutende
+
+## Versehentliche Bitcoin Forks
+ - März 2013 Chain Fork (v0.7/v0.8)
+ - CVE-2018-17144 (Bitcoin 0.15 double spending Bug, wurde nicht ausgenutzt)

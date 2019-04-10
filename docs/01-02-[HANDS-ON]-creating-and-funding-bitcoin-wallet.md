@@ -34,4 +34,7 @@
 
 ![Block explorer](./pics/block-explorer-tx.png)
 
+- https://chain.so/
+- https://test-insight.bitpay.com/
+
  - ... warten
