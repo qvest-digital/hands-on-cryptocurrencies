@@ -20,3 +20,4 @@
  - In Dublin gibt es ein nettes Cafe, das Bitcoin akzeptiert (Busyfeet & Coco). Dort steht auch ein ATM.
  - James Howells wurde ja schon erwähnt.
  - Es gibt auch BTC-CFDs (natürlich!)
+ - China will immer mal Mining verbieten (zu viel Verbrauch von subventioniertem Strom)
