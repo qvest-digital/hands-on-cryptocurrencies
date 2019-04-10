@@ -21,3 +21,7 @@ https://remix.ethereum.org
 # Deployment auf Blockchain
 -> Contract-Adresse  
 -> Application Binary Interface (ABI)
+
+# Frontend: http://aa.bb.cc.dd:4200/
+- ABI und Adresse eintragen
+- `npm run start`

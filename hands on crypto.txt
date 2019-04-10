@@ -1,21 +1,6 @@
 Hands-on Crypto
 ---------------
 
-[THEORIE]
-
-		Nodes
-			https://coin.dance/nodes
-			https://bitnodes.earn.com/
-
-[THEORIE]
-
-	P2P-Netz -> Betrieb eines Nodes
-
-	Was ist das?
-		Knoten zur Teilnahme am P2P-Netz
-		Verifiziert und speichert Blocks
-		Leitet Transaktionen weiter
-
 Testnets:
 - Bitcoin
 	https://en.bitcoin.it/wiki/Testnet
@@ -43,34 +28,10 @@ Testnets:
 		private key 270f967a30e1db1e8555d0d0e6fb73f0587e53ccea7d993a556fc6cd414d14af
 		1.5 ETH
 		
-	https://ropsten-stats.parity.io/	https://ethstats.net/
-	
 	Faucets:
 		https://faucet.ropsten.be/
 		curl -X POST  -H "Content-Type: application/json" -d '{"toWhom":"0xb955173f9550681FcA820380E9d47846A8ad9c3f"}' https://ropsten.faucet.b9lab.com/tap
+	
+Bookmarks:
 
-	Programmierbar
-	
-		EVM, Ausführung zur Konsensfindung
-		Smart Contracts, programmiert in "Solidity"
-
-	Tokens
-	
-		ERC20
-		Zusätzliche Bilanzeinheit, definiert durch Contract-Code
-		https://etherscan.io/tokens	177000+ token contracts deployed
-	
-	[HANDS ON: Token contract für TARENT tokens deployen, Interaktion]
-	
-		Metamask	VcJYEAQMjA8H
-					unique verb adjust give search insect cat metal canvas romance bread knee
-					
-			https://theethereum.wiki/w/index.php/ERC20_Token_Standard
-			https://programtheblockchain.com/posts/2018/01/30/writing-an-erc20-token-contract/
-			https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol
-		
-Live-CD:
-	pacman -S electrum bfgminer go-ethereum
-	Etherwall/Mist + geth --light
-	pacaur -S rocketchat-client-bin mist
-	
+	https://chrome.google.com/webstore/search/metamask
