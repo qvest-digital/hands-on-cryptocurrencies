@@ -1,11 +1,16 @@
 # :mortar_board: THEORIE: _Mining_
 
 ## Cryptocurrencies "verbrennen" Rechenleistung in gigantischem Ausmaß für _Proof-of-Work (PoW)_
-## Mining absichtlich ineffizient
+
+## Mining ist absichtlich ineffizient, um Angriffe auf das Netzwerk teuer zu machen!
+
+## Mining früher:
+- Nerds lassen nebenbei ihr Notebook minen
+- Wettbewerb beginnt: optimierte Mining-Software für GPUs ist um Größenordnungen effizienter
 
 ## Mining heute:
 
-### Bitcoin: ASICS haben CPUs und GPUs verdrängt
+### ASICs haben CPUs und GPUs verdrängt
 
 Beispiel Bitmain Antminer S9
 - 14 TH/s
@@ -24,11 +29,15 @@ Innenansicht:
 
 ![](./pics/mining-farm.jpg)
 
-### Manche Cryptocurrencies wehren sich gegen ASICs
+## Manche Cryptocurrencies wehren sich gegen ASICs
 
 - Ethereum: PoW-Algorithmus Ethash ist Memory-hard = gut für GPU-Mining
 - Monero: regelmäßige Hardforks mit Änderung des PoW-Algorithmus (Cryptonight)
 
 Ständiges Katz-und-Maus-Spiel zwischen ASIC-Herstellern und Entwicklern
 
-Solo-Mining vs. Pool-Mining
+## Pool-Mining
+- Solo-Mining in der Regel aussichtslos
+- Mining in einem Pool
+  - zentraler Koordinator verteilt Teilaufgaben
+  - Miner werden entlohnt für ihre erledigten Aufgaben
