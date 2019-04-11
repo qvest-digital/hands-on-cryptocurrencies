@@ -36,5 +36,6 @@
 
 - https://chain.so/
 - https://test-insight.bitpay.com/
+- https://live.blockcypher.com/btc-testnet/
 
  - ... warten
