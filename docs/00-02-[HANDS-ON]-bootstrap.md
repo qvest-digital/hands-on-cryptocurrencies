@@ -12,5 +12,5 @@ Wir benutzen ein Linux Live-System mit vorinstallierter Software.
 
   * deutsches Tastaturlayout einstellen (keytable=de)
   * "Boot: Manjaro.x86_64 xfce" auswählen
-  * WLAN "tarent-guest" einrichten
+  * WLAN ~~"tarent-guest"~~ "tarent-lan" einrichten
   * Root-Password: "manjaro"
