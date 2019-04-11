@@ -18,9 +18,8 @@
 - private key = Random 256bit
 - public key = RIPEMD-160(SHA256(private key)) = Adresse
 
-
 ## Bitcoin Kursentwicklung
- - ![Block explorer](./pics/block-explorer-tx.png)
+![bitcoin-price](./pics/bitcoin-price.png)
 
 ## Bitcoin Forks (Split Coins)
  - Bitcoin Cash: Fork bei Block 478558, 1.8.2017, (BTC->BCH)
